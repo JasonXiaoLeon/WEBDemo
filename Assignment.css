@@ -1,0 +1,78 @@
+.flexcontainer{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.flex-item{
+  flex: 0 0 calc(33.333% - 40px); /* 计算每个项目的宽度，10px是为了留出一些间隔 */
+  box-sizing: border-box; /* 保证边框和内边距的宽度不会使元素超过指定的宽度 */
+}
+
+.flex-item:hover{
+  transform: translateY(-8px);
+  background-color: darkorchid;
+  transform: scale(1.05);
+}
+
+.odd{
+  background-color: lightgreen;
+}
+.even{
+  background-color: lightskyblue;
+}
+
+.card {
+  width: 300px; /* 设置 div 的宽度 */
+  height: auto; /* 设置 div 的高度 */
+  overflow: hidden; /* 避免图像溢出 div 的边界 */
+  padding: 20px 8px;
+  color: white;
+  margin: 20px;
+  box-shadow: 1px 1px 5px gray;
+  font-size: 10px;
+}
+
+
+.card__image-container img {
+  width: 100%; /* 使图像填充整个 div 的宽度 */
+  height: 100%; /* 使图像填充整个 div 的高度 */
+  object-fit: cover; /* 根据设置的宽高比例裁剪并填充整个容器 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+}
+.card__btm-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-top: 30px;
+}
+.card__timespan{
+  display: flex;
+  justify-content: center;
+}
+.card__btn{
+
+  width: 90px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  box-shadow: 1px 1px 2px gray;
+}
+.card__btn:hover {
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(1.1); /* 将按钮放大 1.1 倍 */
+}
+.card__btn:active{
+  background-color: #45a049;
+}
+.card__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 700px) {
+  .flexcontainer{
+    flex-direction: column;
+  }
+}
