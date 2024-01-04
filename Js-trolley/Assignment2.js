@@ -2,7 +2,7 @@ let shoppingList = ["牛奶","鸡蛋","面包"]
         const btn = document.querySelector("button")
         const ipt = document.querySelector("input")
         btn.addEventListener('click',function(){
-            const userInput = ipt.value 
+            const userInput = ipt.value.trim() 
             if(trolleyIsfull(shoppingList)){
                 alert("The trolly is full, you can't add items")
             }else{             
